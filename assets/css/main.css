@@ -3357,3 +3357,9 @@ input, select, textarea {
 	  .button:active:after {
 		background: teal;
 	  }
+	  .center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	  }
