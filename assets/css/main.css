@@ -3400,7 +3400,9 @@ input, select, textarea {
  transition: transform .2s ease;
  margin-bottom: 1rem;
 }
-
+.avatar{
+	border-radius: 50%;
+}
 
 /*Card footer*/
 .card-social {
