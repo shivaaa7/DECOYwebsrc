@@ -67,10 +67,19 @@ input, select, textarea {
 	appearance: none;
 }
 
+:root{
+    --black: #130f40;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.1);
+    --border: .2rem solid rgba(0,0,0,.1);
+	--green: rgb(124, 215, 124);
+}
+
 /* Basic */
 
 	html {
 		box-sizing: border-box;
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
 	}
 
 	*, *:before, *:after {
@@ -177,6 +186,97 @@ input, select, textarea {
 		font-style: italic;
 		padding: 1em 0 1em 2em;
 	}
+
+/* menubar starts */
+#header .menubar{
+	display: flex;
+	align-items: center;
+	background-color: white;
+	top: -5%;
+	padding-top: 5rem;
+	padding-bottom: 1rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: var(--box-shadow);
+}
+
+#header .menubar .header{
+	width: 100%;
+	transition: all 0.2s linear;
+}
+
+#header .menubar .header.active{
+	left: 0;
+}
+
+#header .menubar .header a{
+	margin: 0 1rem;
+	font-size: 1.7rem;
+	color: var(--black);
+}
+
+#header .menubar .header a:hover{
+	color: var(--green);
+}
+
+#header .menubar .icons div{
+	color: var(--black);
+	font-size: 2rem;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+#header .menubar .icons{
+	display: none;
+}
+
+#header .menubar .icons div:hover{
+	color: var(--green);
+}
+
+@media screen and (max-width: 740px){
+
+	#header .menubar{
+		top: -8%;
+	}
+
+	#header .menubar .icons{
+		display: block;
+		margin-left: 1rem;
+	}
+
+	#header .menubar .header{
+		box-shadow: var(--box-shadow);
+		border-radius: 5px;
+		text-align: left;
+		width: 25%;
+		background-color: #fff;
+		position: absolute;
+		top: 110%;
+		left: -50%;
+	}
+
+	#header .menubar .header a{
+		margin: 1rem .5rem;
+		display: block;
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 540px){
+	 #header .menubar{
+		left: 0;
+	 }
+
+	#header .menubar .header a{
+		margin: .5rem .25rem;
+		font-size: 1rem;
+	}
+}
+/* menubar ends */
+
+
 
 /* Container */
 
