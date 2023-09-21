@@ -3605,3 +3605,6 @@ input, select, textarea {
 		transition: box-shadow .3s ease, transform .2s ease;
 	}
 }
+.feature.right button{
+	float: right;
+}
